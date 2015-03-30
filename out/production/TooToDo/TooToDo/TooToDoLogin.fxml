@@ -1,0 +1,36 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.layout.VBox?>
+<GridPane fx:controller="TooToDo.ToDoListController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          stylesheets="/TooToDo/styleSheet.css">
+    <Label style="-fx-font: NORMAL 20 Tahoma;" text = "Too To Do"
+           GridPane.columnIndex = "0" GridPane.rowIndex = "0" GridPane.columnSpan="2">
+    </Label>
+    <Text text = "Username:"
+          GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="usernameField" promptText="username"
+          GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Text text = "Password:"
+          GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordField" promptText="password"
+            GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <VBox GridPane.columnIndex="1" GridPane.rowIndex="3" alignment="BASELINE_CENTER" spacing="5">
+        <HBox spacing="10">
+            <Button text = "Log In"
+                      GridPane.columnIndex="0" GridPane.rowIndex="0"
+                      onAction="#handleLogInButton"/>
+            <Button text = "Register"
+                GridPane.columnIndex="0" GridPane.rowIndex="0"
+                onAction="#handleWantToRegisterButton"/>
+        </HBox>
+            <Text fx:id="loginFailed"/>
+    </VBox>
+</GridPane>
