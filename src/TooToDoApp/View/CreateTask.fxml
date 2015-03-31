@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="/TooToDoApp/CSS/styleSheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="TooToDoApp.Controller.CreateTaskController">
+  <children>
+    <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label text="Task Name:" />
+        <TextField fx:id="taskNameField" prefWidth="100.0">
+          <VBox.margin>
+            <Insets left="150.0" right="150.0" fx:id="x1" />
+          </VBox.margin>
+        </TextField>
+        <Label text="Task Notes:" />
+        <TextField fx:id="taskNotesField" prefHeight="-1.0" prefWidth="200.0" VBox.margin="$x1" VBox.vgrow="ALWAYS" />
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+          <children>
+            <Button fx:id="createTaskButton" mnemonicParsing="false" onAction="#handleCreateTask" text="Create Task" />
+            <Button id="createTaskButton" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

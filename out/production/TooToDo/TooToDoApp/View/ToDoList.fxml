@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="/TooToDoApp/CSS/styleSheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="TooToDoApp.Controller.ToDoListController">
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+      <children>
+        <Button id="createTaskButton" mnemonicParsing="false" onAction="#handleCreateTask" text="Create Task" />
+        <Button fx:id="completeTaskButton" mnemonicParsing="false" onAction="#handleCompleteTask" text="Complete Task" />
+        <Button fx:id="deleteTaskButton" mnemonicParsing="false" onAction="#handleDeleteTask" text="Delete Task" />
+        <Button id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <TableView fx:id="toDoTable" prefHeight="-1.0" prefWidth="-1.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="Done Yet?" fx:id="doneColumn" />
+        <TableColumn prefWidth="150.0" text="Task" fx:id="taskColumn" />
+        <TableColumn minWidth="50.0" prefWidth="300.0" text="Task Notes" fx:id="taskNotesColumn" />
+      </columns>
+      <BorderPane.margin>
+        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+      </BorderPane.margin>
+    </TableView>
+  </center>
+  <top>
+    <Label text="To Do List:" BorderPane.alignment="BOTTOM_CENTER" />
+  </top>
+</BorderPane>
