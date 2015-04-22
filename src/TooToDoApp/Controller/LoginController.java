@@ -5,6 +5,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+/**
+ * Controller for Login Screen
+ */
 public class LoginController {
     @FXML
     private TextField loginTextField;
@@ -18,7 +21,8 @@ public class LoginController {
     public LoginController() {}
 
     /**
-     * Handles Login Button
+     * Handles Login Button by checking for valid usernames and passwords,
+     * if not valid, show text "Login Failed"
      */
     @FXML
     private void handleLoginButton() {
@@ -42,7 +46,8 @@ public class LoginController {
     }
 
     /**
-     * @param main, setter for main
+     * sets TooToDoMain in order interact with the views
+     * @param main the TooToDoMain class that called the controller
      */
     public void setMain(TooToDoMain main) {
         this.main = main;

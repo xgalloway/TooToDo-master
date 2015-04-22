@@ -6,6 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+/**
+ * Controller for Registration Page
+ */
 public class RegistrationController {
     @FXML
     private TextField usernameField;
@@ -49,6 +52,10 @@ public class RegistrationController {
         main.showLogin();
     }
 
+    /**
+     * sets TooToDoMain in order interact with the views
+     * @param main the TooToDoMain class that called the controller
+     */
     @FXML
     public void setMain(TooToDoMain main) {
         this.main = main;

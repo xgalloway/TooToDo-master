@@ -6,6 +6,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+/**
+ * Controller class for the main To Do List screen.
+ */
 public class ToDoListController {
     @FXML
     private TableView<ToDo> toDoTable;
@@ -39,6 +42,10 @@ public class ToDoListController {
         main.showLogin();
     }
 
+    /**
+     * Upon selecting the complete task button, the method is called and sets the complete
+     * boolean value of the task to true.
+     */
     @FXML
     public void handleCompleteTask() {
         int selectedIndex = toDoTable.getSelectionModel().getSelectedIndex();
@@ -48,6 +55,10 @@ public class ToDoListController {
         }
     }
 
+    /**
+     * Upon selecting the delete task button, the method is called and removes the
+     * selected task from the list.
+     */
     @FXML
     public void handleDeleteTask() {
         int selectedIndex = toDoTable.getSelectionModel().getSelectedIndex();
@@ -56,6 +67,10 @@ public class ToDoListController {
         }
     }
 
+    /**
+     * sets TooToDoMain in order interact with the views
+     * @param main the TooToDoMain class that called the controller
+     */
     public void setMain(TooToDoMain main) {
         this.main = main;
 

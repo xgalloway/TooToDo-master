@@ -21,7 +21,7 @@
       <columns>
         <TableColumn prefWidth="75.0" text="Done Yet?" fx:id="doneColumn" />
         <TableColumn prefWidth="150.0" text="Task" fx:id="taskColumn" />
-        <TableColumn minWidth="50.0" prefWidth="300.0" text="Task Notes" fx:id="taskNotesColumn" />
+        <TableColumn minWidth="50.0" prefWidth="500.0" text="Task Notes" fx:id="taskNotesColumn" />
       </columns>
       <BorderPane.margin>
         <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />

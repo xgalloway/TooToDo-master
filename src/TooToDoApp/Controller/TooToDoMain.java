@@ -9,17 +9,23 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * Main class of Application
+ */
 public class TooToDoMain extends Application {
 
     private Stage primaryStage;
 
     private Container container = new Container();
 
-
     public static void main(String[] args) {
         launch(args);
     }
 
+    /**
+     * start function which is called at start of the program.
+     * @param primaryStage the main stage that will show views
+     */
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -40,6 +46,9 @@ public class TooToDoMain extends Application {
         }
     }
 
+    /**
+     * Shows the To Do List
+     */
     public void showToDoList() {
         try {
             FXMLLoader loader = new FXMLLoader(TooToDoMain.class.getResource("/TooToDoApp/View/ToDoList.fxml"));
@@ -56,6 +65,9 @@ public class TooToDoMain extends Application {
         }
     }
 
+    /**
+     * Shows the registration page
+     */
     public void showRegistration() {
         try {
             FXMLLoader loader = new FXMLLoader(TooToDoMain.class.getResource("/TooToDoApp/View/Registration.fxml"));
@@ -72,6 +84,9 @@ public class TooToDoMain extends Application {
         }
     }
 
+    /**
+     * Shows the create task page
+     */
     public void showCreateTask() {
         try {
             FXMLLoader loader = new FXMLLoader(TooToDoMain.class.getResource("/TooToDoApp/View/CreateTask.fxml"));
@@ -88,6 +103,9 @@ public class TooToDoMain extends Application {
         }
     }
 
+    /**
+     * Shows the login page
+     */
     public void showLogin() {
         try {
             FXMLLoader loader = new FXMLLoader(TooToDoMain.class.getResource("/TooToDoApp/View/Login.fxml"));
@@ -104,5 +122,9 @@ public class TooToDoMain extends Application {
         }
     }
 
+    /**
+     * Getter for the container
+     * @return container
+     */
     public Container getContainer() {return container;}
 }
